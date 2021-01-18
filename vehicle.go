@@ -1,7 +1,5 @@
 package main
 
-import ()
-
 type vehicle interface {
 }
 
@@ -24,20 +22,20 @@ type bike struct {
 
 // Values array for the feedback.json file
 type values struct {
-	Models []model `json:"values"`
+	Models []Model `json:"values"`
 }
 
 // Model array for the feedback.json file
-type model struct {
+type Model struct {
 	Name     string   `json:"model"`
 	Feedback []string `json:"feedback"`
 }
 
 type feedbackResult struct {
-	FeedbackTotal    int
-	FeedbackPositive int
-	FeedbackNegative int
-	FeedbackNeutral  int
+	feedbackTotal    int
+	feedbackPositive int
+	feedbackNegative int
+	feedbackNeutral  int
 }
 
 var vehicleResult map[string]feedbackResult
